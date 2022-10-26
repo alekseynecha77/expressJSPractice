@@ -1,7 +1,9 @@
 extends layout
 
 block content
-  h2 HOWDY
+ if name
+   h2 HOWDY, #{name}!
+ else
   form(action='/hello', method='post')
     label Please enter your name 
         input(type='text', name='username')
