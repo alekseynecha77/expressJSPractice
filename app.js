@@ -15,7 +15,19 @@ const colors = [
   ];
   
 app.use(bodyParser.urlencoded({extended: false}))
-app.use(cookieParser());
+
+app.use(cookieParser())
+
+app.use((req, res, next)=>{
+    console.log('one');
+    next();
+});
+
+app.use((req, res, next)=>{
+    console.log('two');
+    next();
+});
+
 app.set('view engine', 'pug');
 
 app.get('/', (req, res)=>{
