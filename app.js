@@ -11,8 +11,8 @@ app.use(cookieParser())
 
 app.set('view engine', 'pug');
 
-const mainRoutes = require('/Users/alekseinecha77/Desktop/expressSimpleApp/expressJSPractice/views/routes');
-const cardRoutes = require('/Users/alekseinecha77/Desktop/expressSimpleApp/expressJSPractice/views/routes/cards');
+const mainRoutes = require('./views/routes/index');
+const cardRoutes = require('./views/routes/cards');
 
 app.use(mainRoutes);
 app.use('/cards', cardRoutes);

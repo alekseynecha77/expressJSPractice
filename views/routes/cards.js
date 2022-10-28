@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const { data } = require('/Users/alekseinecha77/Desktop/expressSimpleApp/expressJSPractice/data/flashCardData.json');
+const { data } = require('../../data/flashCardData.json');
 const { cards } = data;
 
 const colors = [
