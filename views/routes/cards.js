@@ -3,11 +3,11 @@ const router = express.Router();
 const { data } = require('/Users/alekseinecha77/Desktop/expressSimpleApp/expressJSPractice/data/flashCardData.json');
 const { cards } = data;
 
-// const colors = [
-//     'green',
-//     'red',
-//     'yello'
-// ];
+const colors = [
+    'green',
+    'red',
+    'yello'
+];
 
 router.get('/:id', (req, res) => {
     const { side } = req.query;
@@ -15,7 +15,7 @@ router.get('/:id', (req, res) => {
     const text = cards[id][side];
     const{ hint } = cards[id];
 
-    const templateData = { text, hint };
+    const templateData = { text, hint, colors };
     res.render('card', templateData);
 });
 
